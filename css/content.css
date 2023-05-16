@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+main {
+    font-family: 'Oswald', sans-serif;
+}
+
+.title h1 {
+    color: #483420;
+    margin: 0;
+    font-size: 10vh;
+    margin-bottom: 3%;
+}
+
+.featureds {
+    display: flex;
+    grid-column-gap: 50px;
+}
+
+.featured-picture {
+    height: 75vh;
+    aspect-ratio: 5/4;
+    flex-basis: 100px;
+}
+
+.featured-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.blogs {
+    flex-basis: 100px;
+    float: left;
+    height: 100%;
+}
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog1, .blog2{
+    border-bottom: 1px solid #988D7C;
+}
+
+.blogs p {
+    color: #988D7C;
+}
+
+.blogs h1 {
+    color: #483420;
+    font-size: 6vh;
+}
+
+.blog1-extend, .blog2-extend, .blog3-extend {
+    display: flex;
+    width: 80vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blogs .readmore {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: #F4EAE2;
+    border: 1px solid #988D7C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+.blogs .readmore img {
+    filter: opacity(0.5) drop-shadow(0 0 0 #483420);
+    transition: all ease 0.8s;
+}
+
+.blogs .readmore:hover {
+    border: none;
+    background: #483420;
+}
+
+.blogs .readmore:hover img {
+    transform: rotate(180deg);
+    filter: opacity(0.5) drop-shadow(0 0 0 #F4EAE2);
+    filter: invert(100%);
+}

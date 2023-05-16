@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+footer {
+    font-family: 'Sora', sans-serif;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.footer-categories {
+    width: 30%;
+}
+
+.footer-categories ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-categories a {
+    text-decoration: none;
+    color: #483420;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.medias-wrapper {
+    padding: 0 20px;
+    width: 15%;
+}
+
+.medias {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    fill: #483420;
+}
+
+.medias img {
+    cursor: pointer;
+}
