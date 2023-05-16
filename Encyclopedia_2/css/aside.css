@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap');
+
+.about {
+    background: #F4F4F4;
+
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.about h2 {
+    color: #636363;
+    font-family: 'Cormorant SC', serif;
+    margin: 1vh;
+}
+
+.about p {
+    color: #5F5E5E;
+    font-family: 'Inria Sans', sans-serif;
+    margin: 1vh;
+}

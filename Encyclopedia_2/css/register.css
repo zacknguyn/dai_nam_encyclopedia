@@ -1,0 +1,106 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Serif Text';
+
+    width: 40%;
+    padding: 2% 1%;
+    margin: 7.5% auto;
+    background-color: #FF9A8D;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper h1 {
+    font-size: 7vh;
+    color: #4A5365;
+    margin-bottom: 5%;
+}
+
+form input {
+    font-family: 'DM Serif Text';
+    width: 92%;
+    outline: none;
+    border: 1px solid #CFCCCC;
+    padding: 3% 4%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: #CFCCCC;
+    transition: all ease 0.5s;
+}
+
+button {
+    font-size: 6vh;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 90%;
+    background: #FF6363;
+    font-family: 'DM Serif Text';
+    color: #2d2d2d;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+button:hover {
+    color: #C5C5C5;
+    text-shadow:
+    1px 1px 0 #000000;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    background: #4A5365;
+}
+
+input:focus {
+    border: 1px solid #4A5365;
+}
+
+.terms {
+    margin-top: 2vh;
+    font-family: 'Crimson Pro', serif;
+}
+
+.terms input {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.terms label {
+    font-size: 2.5vh;
+    font-family: 'DM Serif Text';
+}
+
+.terms a {
+    color: #4C4C4C;
+    text-decoration: none;
+    transition: all ease 0.5s;
+}
+
+.terms a:hover {
+    color: #24252f;
+}
+
+.member {
+    font-family: 'Crimson Pro', serif;
+    font-size: 3vh;
+    margin-top: 10%;
+}
+
+.member a {
+    color: #4C4C4C;
+    text-decoration: none;
+    font-family: 'DM Serif Text';
+    font-size: 2.75vh;
+    transition: all ease 0.5s;
+}
+
+.member a:hover {
+    color: #24252f;
+}

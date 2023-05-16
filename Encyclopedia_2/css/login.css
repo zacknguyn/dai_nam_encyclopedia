@@ -1,0 +1,95 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Serif Text';
+
+    width: 40%;
+    padding: 2% 1%;
+    margin: 7.5% auto;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper h1 {
+    font-size: 7vh;
+    color: #4A5365;
+    margin-bottom: 5%;
+}
+
+form input {
+    font-family: 'DM Serif Text';
+    width: 92%;
+    outline: none;
+    border: 1px solid #CFCCCC;
+    padding: 3% 4%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: #CFCCCC;
+    transition: all ease 0.5s;
+}
+
+button {
+    font-size: 6vh;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 90%;
+    background: #4A5365;
+    font-family: 'DM Serif Text';
+    color: #C5C5C5;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+button:hover {
+    color: #2d2d2d;
+    text-shadow:
+    1px 1px 0 #000000;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    background: #FF6363;
+}
+
+input:focus {
+    border: 1px solid #B65B5B;
+}
+
+.member {
+    font-family: 'Crimson Pro', serif;
+    font-size: 3vh;
+    margin-top: 10%;
+}
+
+.member a {
+    font-family: 'DM Serif Text';
+    font-size: 2.75vh;
+    color: #B65B5B;
+    text-decoration: none;
+    transition: all ease 0.5s;
+}
+
+.member a:hover {
+    color: #7c3a3a;
+}
+
+.recover {
+    text-align: right;
+    font-size: 2.5vh;
+    margin: 0.3% 1.4% 0 0;
+}
+
+.recover a {
+    text-decoration: none;
+    color: #B65B5B;
+    transition: all ease 0.5s;
+}
+
+.recover a:hover {
+    color: #7c3a3a;
+}
