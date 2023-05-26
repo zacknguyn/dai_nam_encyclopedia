@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+content {
+    font-family: 'Sora', sans-serif;
+}
 
 .nav-bar {
     display: flex;
@@ -38,11 +43,7 @@
 
 .menu-hamburger::after {
     transform: translate(-12px, 3px);
-}
-
-.menu-btn:hover {
-    transform: rotate(90deg);
-    transition: all ease 0.5s;
+    border-bottom
 }
 
 .buy-souvenirs-btn {
@@ -62,7 +63,7 @@
 
 .buy-souvenirs-btn p {
     color: #F4EAE2;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 0.7vw;
     background: transparent;
     background: #483420;
@@ -78,3 +79,52 @@
     color: #483420;
 }
 
+.mega-dropdown-menu {
+    background: #988D7C;
+    border: none;
+    border-radius: 0px;
+    border-top: 5px solid #483420;
+    line-height: 1.6rem;
+    min-height: 150px;
+    padding: 30px 30px;
+    width: 100%;
+}
+
+.dropdown-menu {
+    box-sizing: border-box;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    float: left;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dropdown-menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #483420;
+    font-size: 2vh;
+    font-weight: bold;
+    font-family: 'Sora', sans-serif;
+    padding: 0 60px 0 10px;
+    position: relative;
+}
+
+
+.dropdown-menu a:hover {
+    border-left: 5px solid #483420;
+}

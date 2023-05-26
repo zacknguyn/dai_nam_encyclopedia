@@ -10,7 +10,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin: 0 10px;
+    margin: 0 auto;
 }
 
 .footer-categories {
@@ -30,10 +30,21 @@ footer {
     color: #483420;
     font-size: 2vh;
     font-weight: bold;
+    transition: all ease 0.5s;
+}
+
+.footer-categories a:hover {
+    color: #988D7C;
+    font-size: 2.2vh;
+    text-shadow:
+    1px 1px 0 #483420;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -o-transition: all ease .5s;
 }
 
 .medias-wrapper {
-    padding: 0 20px;
+    padding: 0 auto;
     width: 15%;
 }
 
@@ -46,4 +57,13 @@ footer {
 
 .medias img {
     cursor: pointer;
+    transition: all ease 1s;
+}
+
+.medias img:hover {
+    width: 5vh;
+    filter: opacity(0.5) drop-shadow(1px 1px 1px #483420);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -o-transition: all ease .5s;
 }
