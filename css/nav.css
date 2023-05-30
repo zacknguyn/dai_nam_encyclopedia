@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
+main {
+    z-index: 1;
+}
+
 content {
     font-family: 'Sora', sans-serif;
+}
+
+.buy-souvenirs-btn a {
+    text-decoration: none;
 }
 
 .nav-bar {
