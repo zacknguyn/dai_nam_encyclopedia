@@ -2,6 +2,7 @@ const button = document.querySelector(".menu-btn");
 const nav = document.body.querySelector("nav");
 const dropdown = document.querySelector(".dropdown-menu");
 const main = document.querySelector("main");
+const footer = document.querySelector("footer");
 
 button.addEventListener("click", () => {
     dropdown.style.top = document.defaultView.getComputedStyle(nav).getPropertyValue("height");
@@ -11,6 +12,7 @@ button.addEventListener("click", () => {
     if (nav.dataset.active == "false") {
         nav.dataset.active = "true";
         main.style.transform = "translateY(" + offsetBottom + "px)";
+        footer.style.transform = "translateY(" + offsetBottom + "px)";
         // dropdown.style.display = "block";
         button.style.transform = "rotate(90deg)";
         button.style.borderBottom = "5px solid #483420";
@@ -18,10 +20,17 @@ button.addEventListener("click", () => {
     }
     else {
         nav.dataset.active = "false";
+        dropdown.style.zIndex = "-1";
         main.style.transform = "translateY(0px)";
+        footer.style.transform = "translateY(0px)";
         // dropdown.style.display = "none";
         button.style.transform = "rotate(0deg)";
         button.style.borderBottom = "none";
         button.style.borderRight = "none";
     }
+});
+
+dropdown.addEventListener("transitionend", () => {
+    if (nav.dataset.active == "true") 
+        dropdown.style.zIndex = "0";
 });

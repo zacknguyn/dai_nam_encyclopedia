@@ -100,7 +100,7 @@ nav[data-active="true"] .mega-dropdown-menu {
 }
 
 nav[data-active="true"] + main {
-    transform: translateY(0px); /* Black magic from console (JS)*/
+    transform: translateY(0px);
 }
 
 .dropdown-menu {
