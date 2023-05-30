@@ -46,6 +46,8 @@ main {
     grid-area: content;
     padding: 2rem;
     background-color: #F4EAE2;
+    transition: transform 0.5s ease;
+    z-index: 1;
 }
 
 aside {

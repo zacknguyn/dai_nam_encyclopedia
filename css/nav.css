@@ -43,7 +43,7 @@ content {
 
 .menu-hamburger::after {
     transform: translate(-12px, 3px);
-    border-bottom
+    /* border-bottom */
 }
 
 .buy-souvenirs-btn {
@@ -79,7 +79,7 @@ content {
     color: #483420;
 }
 
-.mega-dropdown-menu {
+nav .mega-dropdown-menu {
     background: #988D7C;
     border: none;
     border-radius: 0px;
@@ -87,14 +87,29 @@ content {
     line-height: 1.6rem;
     min-height: 150px;
     padding: 30px 30px;
-    width: 100%;
+    /* Curtan reveal effect */
+    transition: transform 0.5s ease;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    transform: translateY(-70%) scale(0.9);
+}
+
+nav[data-active="true"] .mega-dropdown-menu {
+    transform: translateY(0);
+}
+
+nav[data-active="true"] + main {
+    transform: translateY(0px); /* Black magic from console (JS)*/
 }
 
 .dropdown-menu {
     box-sizing: border-box;
-    top: 100%;
+    width: 100%;
+    height: clamp(5vh, 200px, 25vh);
+    top: 0;
     left: 0;
-    z-index: 1000;
+    /* z-index: 1000; */
     display: block;
     float: left;
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
