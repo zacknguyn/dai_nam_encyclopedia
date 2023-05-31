@@ -29,8 +29,3 @@ button.addEventListener("click", () => {
         button.style.borderRight = "none";
     }
 });
-
-dropdown.addEventListener("transitionend", () => {
-    if (nav.dataset.active == "true") 
-        dropdown.style.zIndex = "0";
-});
