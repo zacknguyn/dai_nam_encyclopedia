@@ -4,13 +4,23 @@ const dropdown = document.querySelector(".dropdown-menu");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 
+const getNavHeight = () => {
+    return document.defaultView.getComputedStyle(nav).getPropertyValue("height");
+};
+
+window.onscroll = () => {
+    if (nav.dataset.active == "false") 
+        button.disabled = (window.pageYOffset > parseInt(getNavHeight())) ? true : false;
+};
+
 button.addEventListener("click", () => {
-    dropdown.style.top = document.defaultView.getComputedStyle(nav).getPropertyValue("height");
+    dropdown.style.top = getNavHeight();
     let dropdownHeight = 
         parseInt(document.defaultView.getComputedStyle(dropdown).getPropertyValue("height"));
     document.body.style.setProperty("--dropdown-height", dropdownHeight + "px");
     // console.log("Hasla vista baby, " + dropdown.style.top + "px and " + offsetBottom + "px");
     if (nav.dataset.active == "false") {
+        window.scrollTo(0,0);
         nav.dataset.active = "true";
 
         // main.style.transform = "translateY(" + dropdownHeight + "px)";
@@ -21,6 +31,9 @@ button.addEventListener("click", () => {
     }
     else {
         nav.dataset.active = "false";
+        button.focus;
+        // set focus to false
+        
         dropdown.style.zIndex = "-1";
         // main.style.transform = "translateY(0px)";
         // footer.style.transform = "translateY(0px)";

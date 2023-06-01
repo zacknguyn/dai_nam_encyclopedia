@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
 footer {
-    font-family: 'Sora', sans-serif;
+    font-family: var(--ui-font);
 }
 
 .footer-wrapper {
@@ -27,17 +27,18 @@ footer {
 
 .footer-categories a {
     text-decoration: none;
-    color: #483420;
+    color: var(--secondary-color);
     font-size: 2vh;
     font-weight: bold;
     transition: all ease 0.5s;
 }
 
 .footer-categories a:hover {
-    color: #988D7C;
+    color: var(--curtain-color);
     font-size: 2.2vh;
     text-shadow:
-    1px 1px 0 #483420;
+    1px 1px 0 var(--secondary-color);
+    transition: all ease 0.5s;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     -o-transition: all ease .5s;
@@ -52,7 +53,7 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    fill: #483420;
+    fill: var(--secondary-color);
 }
 
 .medias img {
@@ -62,7 +63,8 @@ footer {
 
 .medias img:hover {
     width: 5vh;
-    filter: opacity(0.5) drop-shadow(1px 1px 1px #483420);
+    filter: opacity(0.5) drop-shadow(1px 1px 1px var(--secondary-color));
+    transition: all ease 1s;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     -o-transition: all ease .5s;

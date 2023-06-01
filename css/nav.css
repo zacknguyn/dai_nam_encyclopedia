@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
-
 main {
     z-index: 1;
 }
 
-content {
-    font-family: 'Sora', sans-serif;
+nav {
+    font-family: var(--ui-font);
 }
 
 .nav-bar {
@@ -70,8 +67,8 @@ content {
 
 .buy-souvenirs-btn p {
     color: #F4EAE2;
-    font-family: 'Sora', sans-serif;
-    font-size: 0.7vw;
+    font-family: var(--ui-font);
+    font-size: 12px;
     background: transparent;
     background: #483420;
     transition: all ease 1s;
@@ -169,7 +166,7 @@ nav .dropdown-menu {
     color: #483420;
     font-size: 3vh;
     font-weight: bold;
-    font-family: 'Sora', sans-serif;
+    font-family: var(--ui-font);
 }
 
 .dropdown-menu a:hover {
