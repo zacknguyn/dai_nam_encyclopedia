@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/solid.css">
+    
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/content.css">
@@ -17,7 +20,7 @@
 </head>
 <body>
     <div class="container">
-        <nav>
+        <nav data-active="false">
             <div class="nav-bar">
                 <button aria-label="Toggle menu" class="menu-btn" id="btn">
                     <div class="menu-hamburger"></div>
@@ -27,16 +30,39 @@
                 </button>
             </div>
             <div class="dropdown-menu mega-dropdown-menu">
-                <ul id="list">
-                    <a href="#"><li>LINK 1</li></a>
-                    <a href="#"><li>LINK 2</li></a>
-                    <a href="#"><li>LINK 3</li></a>
-                    <a href="#"><li>LINK 4</li></a>
-                    <a href="#"><li>LINK 5</li></a>
-                    <a href="#"><li>LINK 6</li></a>
-                </ul>
+                <div id="menu-list">
+                    <div class="menu-item">
+                        <a href="index.html">
+                            <i class="fa-solid fa-home"></i> 
+                            <span>Home</span>
+                            <div class="menu-background"></div>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="events.html">
+                            <i class="fa-solid fa-blog"></i> 
+                            <span>Events</span>
+                            <div class="menu-background"></div>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">
+                            <i class="fa-solid fa-map"></i> 
+                            <span>Maps</span>
+                            <div class="menu-background"></div>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="shop.html">
+                            <i class="fa-solid fa-shop"></i> 
+                            <span>Shop</span>
+                            <div class="menu-background"></div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
+
         <main>
             <section id="blog">
                 <div class="blog-heading">
