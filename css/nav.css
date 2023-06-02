@@ -130,6 +130,7 @@ nav[data-active="false"] ~ * {
 }
 
 nav[data-active="true"] ~ * {
+    pointer-events: none;
     filter: blur(5px);
     transform: translateY(var(--dropdown-height));
 }

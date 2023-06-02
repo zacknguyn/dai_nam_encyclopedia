@@ -1,0 +1,10 @@
+.carousel {
+    box-sizing: border-box;
+    height: calc(100vh - var(--nav-height));
+    width: 50%;
+    margin: 0 auto;
+    border: 3px solid var(--secondary-color);
+    background-color: bisque;
+    z-index: 1;
+}
+
