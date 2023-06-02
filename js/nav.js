@@ -3,14 +3,20 @@ const nav = document.body.querySelector("nav");
 const dropdown = document.querySelector(".dropdown-menu");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
+const topButton = document.querySelector("#go-top-btn");
 
 const getNavHeight = () => {
     return document.defaultView.getComputedStyle(nav).getPropertyValue("height");
 };
 
 window.onscroll = () => {
+    let navHeight = parseInt(getNavHeight());
     if (nav.dataset.active == "false") 
-        button.disabled = (window.pageYOffset > parseInt(getNavHeight())) ? true : false;
+        button.disabled = (window.pageYOffset > navHeight) ? true : false;
+    if (window.pageYOffset > navHeight)
+        topButton.style.display = "block";
+    else
+        topButton.style.display = "none";
 };
 
 button.addEventListener("click", () => {
