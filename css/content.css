@@ -60,6 +60,7 @@
     border: 1px solid var(--secondary-color);
     background: transparent;
     border-radius: 50px;
+    cursor: pointer;
     
     filter: opacity(0.5) drop-shadow(0 0 0 var(--secondary-color));
     -webkit-filter: invert(0%);

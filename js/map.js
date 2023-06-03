@@ -135,7 +135,7 @@ map.on('load', function () {
         'type': 'Feature',
         'properties': {
         'description':
-        '<strong>Independence</strong><p>Another must-visit historic building in Ho Chi Minh is the <a href="https://en.wikipedia.org/wiki/Independence_Palace">Independence Palace</a>, also known as the Reunification Palace.</p>',
+        '<strong>Independence Palace</strong><p>Another must-visit historic building in Ho Chi Minh is the <a href="https://en.wikipedia.org/wiki/Independence_Palace">Independence Palace</a>, also known as the Reunification Palace.</p>',
         'icon': 'theatre'
         },
         'geometry': {
