@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="assets/fontawesome/css/solid.css">
     
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/carousel.css" />
     <link rel="stylesheet" href="css/shop.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/footer.css" />
@@ -16,6 +15,8 @@
     <script src="js/loader.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/items.js" defer></script>
+    
+
   </head>
   <body>
     <div class="code-loader">
@@ -27,6 +28,9 @@
           <button aria-label="Toggle menu" class="menu-btn" id="btn">
             <div class="menu-hamburger"></div>
           </button>
+          <div class="nav-title">
+            <h1><a href="index.html">DAI NAM ENCYCLOPEDIA</a></h1>
+          </div>
           <button aria-label="Buy souvenirs" class="buy-souvenirs-btn">
             <a href="shop.html"><p>Buy Souvenirs</p></a>
           </button>
@@ -64,29 +68,14 @@
           </div>
         </div>
       </nav>
-      
+
       <main>
-        <div class="fade-arrow">
-          <i class="fas fa-arrow-down-long"></i>
-        </div>
-
-        <a href="#" id="go-top-btn">
-          <button>
-            <i class="fas fa-arrow-up"></i>
-          </button>
-        </a>
-
         <!-- Insert actual content here -->
-        <section class="carousel">
-          <button onclick="moveLeft()">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button onclick="moveRight()">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-          <div class="hot-product product" data-index="0" data-active="true"> 
-            
-            <img
+        <header><h1>Souvenirs Store</h1></header>
+        <div class="products-container">
+          <div class="products">
+            <div class="product">
+              <img
                 class="product-img"
                 src="images/souvenirs/indian_podstakannik.jpg"
                 alt=""
@@ -101,11 +90,10 @@
                   Haha Hehe Hoho Hihi.
                 </p>
               </div>
-              <button class="buy">Huy <s>ngu</s></button>
+              <button class="buy">Buy now</s></button>
             </div>
-             -->
           </div>
-        </section>
+        </div>
       </main>
 
       <footer>

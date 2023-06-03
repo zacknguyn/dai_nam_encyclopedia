@@ -1,46 +1,46 @@
-const menuBtn = document.querySelector(".menu-btn");
+const button = document.querySelector(".menu-btn");
 const nav = document.body.querySelector("nav");
 const dropdown = document.querySelector(".dropdown-menu");
-// const main = document.querySelector("main");
-const topButton = document.querySelector("#go-top-btn");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
 
 const getNavHeight = () => {
     return document.defaultView.getComputedStyle(nav).getPropertyValue("height");
 };
 
-window.addEventListener("scroll", () => {
-    // Enable "Go to top" button when scrolling down
-    // Disable menu button also
-    let navHeight = parseInt(getNavHeight());
+window.onscroll = () => {
     if (nav.dataset.active == "false") 
-        menuBtn.disabled = (window.pageYOffset > navHeight) ? true : false;
-    if (window.pageYOffset > navHeight)
-        topButton.style.display = "block";
-    else
-        topButton.style.display = "none";
-});
+        button.disabled = (window.pageYOffset > parseInt(getNavHeight())) ? true : false;
+};
 
-const dropdownHeight = 
-    parseInt(document.defaultView.getComputedStyle(dropdown).getPropertyValue("height"));
-document.body.style.setProperty("--dropdown-height", dropdownHeight + "px");
-
-menuBtn.addEventListener("click", () => {
+button.addEventListener("click", () => {
     dropdown.style.top = getNavHeight();
+    let dropdownHeight = 
+        parseInt(document.defaultView.getComputedStyle(dropdown).getPropertyValue("height"));
+    document.body.style.setProperty("--dropdown-height", dropdownHeight + "px");
+    // console.log("Hasla vista baby, " + dropdown.style.top + "px and " + offsetBottom + "px");
     if (nav.dataset.active == "false") {
         window.scrollTo(0,0);
         nav.dataset.active = "true";
 
-        menuBtn.style.transform = "rotate(90deg)";
-        menuBtn.style.borderBottom = "5px solid #483420";
-        menuBtn.style.borderRight = "5px solid #483420";
+        // main.style.transform = "translateY(" + dropdownHeight + "px)";
+        // footer.style.transform = "translateY(" + dropdownHeight + "px)";
+        button.style.transform = "rotate(90deg)";
+        button.style.borderBottom = "5px solid #483420";
+        button.style.borderRight = "5px solid #483420";
     }
     else {
         nav.dataset.active = "false";
-        dropdown.style.zIndex = "-1";
+        button.focus;
+        // set focus to false
         
-        menuBtn.style.transform = "rotate(0deg)";
-        menuBtn.style.borderBottom = "none";
-        menuBtn.style.borderRight = "none";
+        dropdown.style.zIndex = "-1";
+        // main.style.transform = "translateY(0px)";
+        // footer.style.transform = "translateY(0px)";
+        // dropdown.style.display = "none";
+        button.style.transform = "rotate(0deg)";
+        button.style.borderBottom = "none";
+        button.style.borderRight = "none";
     }
 });
 

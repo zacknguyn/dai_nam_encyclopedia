@@ -1,10 +1,6 @@
 :root {
     --zoom-rate: 1.25;
 }
-/* General */
-html {
-    scroll-behavior: smooth;
-}
 
 header {
     width: 90%;
@@ -21,22 +17,19 @@ main {
 
 body {
     height: fit-content;
+    /* display: grid;
+    place-content: center;
+    position: relative; */
 }
-/* Product-related setting */
+
 .products-container {
     width: 95%;
-    margin: 0 auto;
     height: fit-content;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 5% auto;
-}
-
-.products-container header {
-    width: 95%;
-    margin: 0 auto;
 }
 
 .products {
@@ -80,7 +73,7 @@ body {
     padding: 0;
     overflow-y: scroll;
 
-    /* font-size: 18px; */
+    font-size: 18px;
     line-height: 1.5em;
 }
 .description p {
@@ -99,7 +92,6 @@ body {
 .product-img {
     object-fit: cover;
     width: 100%;
-    height: 200px;
     min-height: 200px;
     margin: 0 auto;
     border-radius: 5px;
@@ -133,14 +125,10 @@ body {
     color: var(--textColor);
 }
 .product-name > h3 {
-<<<<<<< HEAD
     font-family: var(--subheading-font);
     margin: 5% 2%;
     font-size: 12px;
     
-=======
-    /* font-size: 25px; */
->>>>>>> 0cac0c0e6ae4d5efa8ec29aef4279ec6c66f6379
     width: max-content;
 }
 .product-name::-webkit-scrollbar {
@@ -164,7 +152,7 @@ body {
     border: none;
     background-color: var(--header-color);
     color: var(--card-background);
-    /* font-size: 18px; */
+    font-size: 18px;
     text-transform: capitalize;
     cursor: pointer;
     transition: all .5s ease;
@@ -177,32 +165,5 @@ body {
 .buy:active {
     transform: scale(.9);
 }
-/* Navigate between sections */
-.fade-arrow {
-    position: fixed;
-    z-index: 3;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50% 50%;
-    outline: none;
-    width: fit-content;
-    height: fit-content;
-    background-color: #b68f69;
-    color: var(--header-color);
 
-    opacity: 0;
-    transition: all ease 0.3s;
-}
 
-.fade-arrow i {
-    width: 50px;
-    height: 50px;
-    font-size: 1em;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* position: absolute;
-    top: 50%; */
-}
