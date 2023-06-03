@@ -19,12 +19,18 @@
     <script src="js/nav.js" defer></script>
 </head>
 <body>
+    <div class="code-loader">
+        <span>{</span><span>}</span>
+    </div>
     <div class="container">
         <nav data-active="false">
             <div class="nav-bar">
                 <button aria-label="Toggle menu" class="menu-btn" id="btn">
                     <div class="menu-hamburger"></div>
                 </button>
+                <div class="nav-title">
+                    <h1><a href="index.html">DAI NAM ENCYCLOPEDIA</a></h1>
+                </div>
                 <button aria-label="Buy souvenirs" class="buy-souvenirs-btn">
                     <a href="shop.html"><p>Buy Souvenirs</p></a>
                 </button>
@@ -64,6 +70,11 @@
         </nav>
 
         <main>
+            <a href="#" id="go-top-btn">
+                <button>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </a>
             <header id="blog-heading">
                 <h1>Blogs</h1>
             </header>
@@ -124,7 +135,7 @@
                     <div class="blog-box">
                         <!-- img -->
                         <div class="blog-img">
-                            <img src="images/cuchi.avif" alt="Blog">
+                            <img src="images/cuchi.jpg" alt="Blog">
                         </div>
 
                         <!-- text -->
