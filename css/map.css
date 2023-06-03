@@ -39,10 +39,13 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url("/images/map-explanation-img.jpg");
+    background-image: url("../images/map-img.jpg");
     background-position: center 80%;
     background-size: cover;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     filter: blur(2px);
     -webkit-filter: blur(2px);
 }
