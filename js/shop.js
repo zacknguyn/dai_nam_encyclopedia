@@ -1,4 +1,4 @@
-//Pre-requiste: nav.js and items.js
+//Pre-requiste nav.js
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 
@@ -9,7 +9,7 @@ carousel.style.height = "calc(100vh - " + getNavHeight() + ")";
 
 const productsElement = document.getElementById("products-list");
 console.log(productsList);
-// Implement fancy navigation between carousel and products
+
 let currentSection = "carousel";
 let oldYOffset = window.pageYOffset;
 productsElement.style.setProperty("display", "none");
@@ -17,10 +17,7 @@ productsElement.style.setProperty("display", "none");
 let sumYWheel = 0;
 const threshold = 100;
 const fadeArrow = document.querySelector(".fade-arrow");
-const hideArrow = () => {
-    fadeArrow.style.opacity = "0";
-    fadeArrow.style.zIndex = "-1";
-};
+
 const skipToProducts = () => {
     sumYWheel = 0;
     fadeArrow.style.opacity = "0";
@@ -56,7 +53,6 @@ window.addEventListener("wheel", (event) => {
     if (currentSection == "products" && scrollY > 0 && event.deltaY > 0) {
         sumYWheel = 0;
         fadeArrow.style.opacity = "0";
-        // hideArrow();
     }
     // if (currentSection == "products" && sumYWheel > 
     console.log("Moved " + event.deltaY + " at " + currentSection + ", page = " + scrollY + " total = " + sumYWheel);
@@ -70,7 +66,7 @@ window.addEventListener("wheel", (event) => {
         icon.style.fontSize = rate + "rem";
         icon.style.transform = "scale(" + (sumYWheel > 0 ? +1 : -1) + ")";
     }
-    if (currentSection == "carousel" && event.deltaY <= 0) 
+    if (currentSection == "carousel" && event.deltaY < 0) 
         fadeArrow.style.opacity = "0";
 
     if (currentSection == "carousel") {
@@ -100,30 +96,3 @@ window.setInterval(() => {
         fadeArrow.style.opacity -= 0.05;
     }
 }, 100);
-
-// Implement carousel
-const carouselItems = document.querySelectorAll(".hot-product");
-let curIndex = 0;
-
-const moveLeft = () => {
-    carouselItems[curIndex].dataset.active = "false";
-    curIndex = (curIndex == 0) ? carouselItems.length-1 : curIndex-1;
-    carouselItems[curIndex].dataset.active = "true";
-};
-
-const moveRight = () => {
-    carouselItems[curIndex].dataset.active = "false";
-    curIndex = (curIndex >= carouselItems.length-1) ? 0 : curIndex+1;
-    carouselItems[curIndex].dataset.active = "true";
-}
-
-const addCarouselItem = (item, index) => {
-    carouselItems[index].classList.add("product");
-    let temp = item.cloneNode(true);
-    temp.removeChild(temp.querySelector("button"));
-    carouselItems[index].innerHTML = temp.innerHTML;
-}
-
-for (let i = 0; i < hotProducts.length; i++) {
-    addCarouselItem(hotProducts[i], i);
-}

@@ -1,6 +1,10 @@
 :root {
     --zoom-rate: 1.25;
 }
+/* General */
+html {
+    scroll-behavior: smooth;
+}
 
 header {
     width: 90%;
@@ -17,19 +21,22 @@ main {
 
 body {
     height: fit-content;
-    /* display: grid;
-    place-content: center;
-    position: relative; */
 }
-
+/* Product-related setting */
 .products-container {
     width: 95%;
+    margin: 0 auto;
     height: fit-content;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 5% auto;
+}
+
+.products-container header {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .products {
@@ -73,7 +80,7 @@ body {
     padding: 0;
     overflow-y: scroll;
 
-    font-size: 18px;
+    /* font-size: 18px; */
     line-height: 1.5em;
 }
 .description p {
@@ -125,11 +132,9 @@ body {
     color: var(--textColor);
 }
 .product-name > h3 {
-    font-family: var(--subheading-font);
-    margin: 5% 2%;
-    font-size: 20px;
-    
+    /* font-size: 25px; */
     width: max-content;
+    margin: 0;
 }
 .product-name::-webkit-scrollbar {
     display: none;
@@ -141,7 +146,6 @@ body {
 } */
 
 .buy {
-    font-family: var(--ui-font);
     margin: 0px 20px 20px auto;
     bottom: 0px;
     right: 0px;
@@ -152,7 +156,7 @@ body {
     border: none;
     background-color: var(--header-color);
     color: var(--card-background);
-    font-size: 18px;
+    /* font-size: 18px; */
     text-transform: capitalize;
     cursor: pointer;
     transition: all .5s ease;
@@ -165,5 +169,32 @@ body {
 .buy:active {
     transform: scale(.9);
 }
+/* Navigate between sections */
+.fade-arrow {
+    position: fixed;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50% 50%;
+    outline: none;
+    width: fit-content;
+    height: fit-content;
+    background-color: #b68f69;
+    color: var(--header-color);
 
+    opacity: 0;
+    transition: all ease 0.3s;
+}
 
+.fade-arrow i {
+    width: 50px;
+    height: 50px;
+    font-size: 1em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute;
+    top: 50%; */
+}
