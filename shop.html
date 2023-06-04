@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/fontawesome/css/solid.css">
     
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
     <link rel="stylesheet" href="css/shop.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/footer.css" />
@@ -15,7 +16,7 @@
     <script src="js/loader.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/items.js" defer></script>
-    
+    <script src="js/shop.js" defer></script>
 
   </head>
   <body>
@@ -79,33 +80,58 @@
             <i class="fas fa-arrow-up"></i>
           </button>
         </a>
+
         <!-- Insert actual content here -->
         <section class="carousel">
-          Hello
-          <a href="#products-list">Shop Now</a>
+          <button onclick="moveLeft()">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button onclick="moveRight()">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="hot-product product" data-index="0" data-active="true"> 
+            
+            <img
+                class="product-img"
+                src="images/souvenirs/indian_podstakannik.jpg"
+                alt=""
+              />
+            <div class="product-name">
+              <h3>Indian Podstakannik Who Knows What</h3>
+            </div>
+            <div class="description">
+              <p>
+                Unique or custom, handmade pieces from our tea cups & sets
+                shops. Longer text will enable the scroll bar. Let me test it.
+                Haha Hehe Hoho Hihi.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="hot-product" data-index="1" data-active="false"> B</div>
+          <div class="hot-product" data-index="2" data-active="false"> C </div>
         </section>
 
         <section class="products-container" id="products-list">
           <header><h1>Souvenirs Store</h1></header>
           <div class="products">
+            <!-- 
             <div class="product">
               <img
                 class="product-img"
-                src="images/souvenirs/indian_podstakannik.jpg"
+                src="images/souvenirs/file-name-here.jpg"
                 alt=""
               />
               <div class="product-name">
-                <h3>Indian Podstakannik Who Knows What</h3>
+                <h3> Name </h3>
               </div>
               <div class="description">
-                <p>
-                  Unique or custom, handmade pieces from our tea cups & sets
-                  shops. Longer text will enable the scroll bar. Let me test it.
-                  Haha Hehe Hoho Hihi.
-                </p>
+                <p> Brief or Mythos </p>
               </div>
-              <button class="buy">Buy now</s></button>
+              <button class="buy">Huy <s>ngu</s></button>
             </div>
+             -->
           </div>
         </section>
       </main>

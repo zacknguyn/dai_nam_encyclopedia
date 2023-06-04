@@ -4,6 +4,10 @@ window.addEventListener("load", () => {
     loader.classList.add("code-loader-hidden");
     
     loader.addEventListener("transitionend", () => {
-        document.body.removeChild(loader);
+        try {
+            document.body.removeChild(loader);
+        } catch (error) {
+            console.log(error);
+        }
     })
 })
