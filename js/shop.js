@@ -19,13 +19,22 @@ productsElement.style.setProperty("display", "none");
 let sumYWheel = 0;
 const threshold = 305;
 const fadeArrow = document.querySelector(".fade-arrow");
+const calculateArrow = () => {
+    let icon = fadeArrow.querySelector("i");
+    let rate = 1 + 10 * Math.abs(sumYWheel / threshold);
+    icon.style.width = icon.style.height = rate * 50 + "px";
+    icon.style.fontSize = rate + "rem";
+    icon.style.transform = "scale(" + (sumYWheel > 0 ? +1 : -1) + ")";
+};
 const hideArrow = (reset = true) => {
     if (reset) {
         fadeArrow.style.opacity = "0";
-        fadeArrow.style.width = "0";
+        // fadeArrow.style.width = "0";
     }
     fadeArrow.style.zIndex = "-2";
+    calculateArrow();
 };
+
 const showArrow = () => {
     fadeArrow.style.zIndex = "3";
 };
@@ -98,11 +107,7 @@ const adjustFadeArrow = () => {
     if ((currentSection == firstSection && sumYWheel >= 0) ||
     (currentSection == "products" && sumYWheel <= 0 && scrollY <= 0)) {
         fadeArrow.style.opacity = "1";
-        let icon = fadeArrow.querySelector("i");
-        let rate = 1 + 10 * Math.abs(sumYWheel / threshold);
-        icon.style.width = icon.style.height = rate * 50 + "px";
-        icon.style.fontSize = rate + "rem";
-        icon.style.transform = "scale(" + (sumYWheel > 0 ? +1 : -1) + ")";
+        calculateArrow();
     }
     if (currentSection == firstSection && event.deltaY <= 0) 
         hideArrow();

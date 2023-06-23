@@ -35,54 +35,54 @@ const addProduct = (params) => {
 const hotProducts = [];
 hotProducts.push(
     addProduct({
-        img: "images/souvenirs/indian_podstakannik.jpg",
-        title: "Indian Podstakannik Who Knows What",
-        description: "Unique or custom, handmade pieces from our tea cups & sets shop. Longer text will enable the scroll bar. Let me test it. Haha Hehe Hoho Hihi."
+        img: "images/souvenirs/s1.jpg",
+        title: "Bat Trang Porcelain",
+        description: "Bát Tràng porcelain and pottery is a type of ceramic made in the village of Bát Tràng, on the outskirts of Hanoi, Vietnam."
     })
 );
 
 addProduct({
-    img: "images/souvenirs/sphinx-artifacts.png",
-    title: "Sphinx Artifacts",
-    description: "Carved in-place from limestone, the Sphinx is among the world's largest monoliths. It is 73.5 meters long, 6 meters wide, and 20.22 meters high. "
+    img: "images/souvenirs/s2.jpg",
+    title: "Tribal Textiles",
+    description: "Tribal textiles are prized possessions for tourists in Vietnam as the opportunity to see and buy such uniquely exquisite, hand-stitched craftsmanship is a rare luxury to those visiting from the West."
 });
 
 addProduct({
-    img: "images/souvenirs/sphinx-souvenir.gif",
-    title: "Sphinx Souvenir",
-    description: "Sphinx Souvenir is a small replica of the Sphinx. It is made of high-quality materials and it is very durable. A must-have for every tourist visiting Egypt."
-});
-
-hotProducts.push(
-addProduct({
-    img: "images/souvenirs/Cuneiform Tablets _ Adra Antique Collections.webp",
-    title: "Cuneiform Tablets",
-    description: "Cuneiform Tablets are the earliest known form of writing. They were used in ancient Mesopotamia. They are made of clay and they are very fragile. This is a very good souvenir for history lovers."
-})
-);
-
-addProduct({
-    img: "images/souvenirs/ancient-robot.jpg",
-    title: "Ancient Robot",
-    description: "This is a very old robot. It is made of wood and metal. It is very heavy and it is not working anymore. It is a very good souvenir. Surprsingly, the restored version works just like a complex machine",
+    img: "images/souvenirs/s3.jpg",
+    title: "Paper Lanterns",
+    description: "Paper lanterns are never ever a bad idea. Flat, packable and ready-to-go, these traditional lanterns will add a touch of sensual Vietnamese style to any garden or bedroom and are available in a spectrum of spectacular colours and materials from 4 USD. Go for the silk variety if you’re feeling indulgent."
 });
 
 hotProducts.push(
 addProduct({
-    img: "images/souvenirs/staffordshire-moorlands-pan.jpg",
-    title: "The Staffordshire Moorlands Pan",
-    description: "The Staffordshire Moorlands Pan, sometimes known as the Ilam Pan, is a 2nd-century AD enamelled bronze trulla with an inscription naming four of the forts of Hadrian's Wall"
+    img: "images/souvenirs/s4.jpg",
+    title: "Puppets & Masks",
+    description: "Puppets and masks are used in traditional Vietnamese theatre productions and festivals throughout the year. Made from bamboo, palm leaves and lacquer, the masks are a popular sight in the north."
 })
 );
 
 addProduct({
-    img: "images/souvenirs/pilgrim-badge.jpg",
-    title: "Pilgrim badge",
-    description: "This pilgrim badge was made in France in the late 15th/early 16th century. © The Trustees of the British Museum, CC BY-NC-ND"
+    img: "images/souvenirs/s5.webp",
+    title: "Conical Hats",
+    description: "Conical hats are the most recognisable and classic symbol of the Vietnamese silhouette. The handwoven, palm leaf hat is rich with history, cultural sentiment and designed to protect people from the rain and sun.",
+});
+
+hotProducts.push(
+addProduct({
+    img: "images/souvenirs/s6.jpg",
+    title: "Ao Dai",
+    description: "The national garment of this SE Asian country, Áo Dài are wonderful Vietnam souvenirs. This traditional, tight fitting long dress, used by both men and women especially on special occasions, can be found all over Vietnam."
+})
+);
+
+addProduct({
+    img: "images/souvenirs/s7.jpg",
+    title: "Hand Fans",
+    description: "Hand fans are made of sturdy bamboo and paper or silk. They can be used for cooling or decoratively in the home."
 });
 
 addProduct({
-    img: "images/souvenirs/sphinx ram-headed temple of Amun Karnak.webp",
-    title: "Sphinx ram-headed temple of Amun Karnak",
-    description: "The ram was a symbol of the god Amun, the chief deity worshipped in the Great Temple of Karnak. Each sphinx protects, between its forelegs, a standing statue of the king--originally Ramesses II (c.1279-1213 B.C.E.)."
+    img: "images/souvenirs/s8.jpg",
+    title: "Hand Embroidered Stuff",
+    description: "The art of hand-embroidered garments and items is an old handicraft tradition in Vietnam. You will especially encounter scenic nature scenes, such as flowers, trees, animals and birds."
 });

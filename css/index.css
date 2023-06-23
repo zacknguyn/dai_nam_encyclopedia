@@ -127,7 +127,8 @@ footer {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    margin: 2% 5% 2% auto;
+    margin: 2% auto;
+    /* margin: 2% 5% 2% auto; */
     padding: 0;
     background: #faf3ee;
     height: 120px;
