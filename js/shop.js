@@ -68,7 +68,7 @@ window.addEventListener("scroll", () => {
     console.log("Scrolled");
     if (isHolding) alertGuide();
 });
-window.addEventListener("touchend", () => {
+window.addEventListener("touchmove", () => {
     console.log("Touch end");
     alertGuide();
 });
@@ -122,11 +122,7 @@ const adjustFadeArrow = () => {
     }
 };
 
-window.addEventListener("swiped-down", () => {
-    adjustFadeArrow();
-});
-
-window.addEventListener("swiped-up", () => {
+window.addEventListener("touchmove", () => {
     adjustFadeArrow();
 });
 
