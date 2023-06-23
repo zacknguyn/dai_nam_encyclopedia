@@ -21,8 +21,8 @@ const search = () => {
 
 const search_shop = () => {
     const searchbox = document.getElementById("search-item-shop").value.toUpperCase()
-    const storeitems = document.getElementById("products-container")
-    const item = document.querySelectorAll(".product")
+    const storeitems = document.getElementById("products-list")
+    const item = document.querySelectorAll("#products-list .product")
     const productname = storeitems.getElementsByTagName("h3")
 
     for(var i = 0; i < productname.length; i++) {

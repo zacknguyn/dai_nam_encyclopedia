@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
     let navHeight = parseInt(getNavHeight());
     if (nav.dataset.active == "false") 
         menuBtn.disabled = (window.pageYOffset > navHeight) ? true : false;
-    if (window.pageYOffset > navHeight)
+    if (window.scrollY > navHeight)
         topButton.style.display = "block";
     else
         topButton.style.display = "none";

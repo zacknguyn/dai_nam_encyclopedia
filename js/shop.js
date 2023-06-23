@@ -2,20 +2,22 @@
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 
+const firstSection = "first";
+
 main.style.setProperty("--nav-height", getNavHeight() + "px");
-const carousel = document.querySelector(".carousel");
-console.log(carousel);
-carousel.style.height = "calc(100vh - " + getNavHeight() + ")";
+const firstPart = document.querySelector("." + firstSection);
+console.log(firstPart);
+firstPart.style.height = "calc(100vh - " + getNavHeight() + ")";
 
 const productsElement = document.getElementById("products-list");
 console.log(productsList);
 // Implement fancy navigation between carousel and products
-let currentSection = "carousel";
-let oldYOffset = window.pageYOffset;
+let currentSection = firstSection;
+let oldYOffset = window.scrollY;
 productsElement.style.setProperty("display", "none");
 
 let sumYWheel = 0;
-const threshold = 100;
+const threshold = 305;
 const fadeArrow = document.querySelector(".fade-arrow");
 const hideArrow = () => {
     fadeArrow.style.opacity = "0";
@@ -24,7 +26,7 @@ const hideArrow = () => {
 const skipToProducts = () => {
     sumYWheel = 0;
     fadeArrow.style.opacity = "0";
-    carousel.style.setProperty("display", "none");
+    firstPart.style.setProperty("display", "none");
     currentSection = "products";
     productsElement.style.setProperty("display", "block");
 };
@@ -32,10 +34,11 @@ const skipToCarousel = () => {
     sumYWheel = 0;
     fadeArrow.style.opacity = "0";
     productsElement.style.setProperty("display", "none");
-    currentSection = "carousel";
-    carousel.style.setProperty("display", "block");
+    currentSection = firstSection;
+    firstPart.style.setProperty("display", "flex");
 }
 
+//TODO: Add support for mobile user swipe down and who drag the scroll bar
 window.addEventListener("scroll", () => {
     let scrollY = window.scrollY;
     console.log(scrollY + " vs. " + main.scrollHeight + " at " + currentSection);
@@ -49,19 +52,21 @@ window.addEventListener("wheel", (event) => {
     let scrollX = window.scrollX;
     let scrollY = window.scrollY;
     // if (isScrollingDown) return;
-    if ((currentSection == "carousel" && event.deltaY >= 0) 
+    if ((currentSection == firstSection && event.deltaY >= 0) 
     || (currentSection == "products" && scrollY <= 0 && event.deltaY <= 0))
         sumYWheel += event.deltaY;
-    if (currentSection == "carousel" && sumYWheel < 0) sumYWheel = 0;
-    if (currentSection == "products" && scrollY > 0 && event.deltaY > 0) {
+    if (currentSection == firstSection && sumYWheel < 0) sumYWheel = 0;
+    if ((currentSection == "products" && scrollY >= 0 && event.deltaY > 0)
+    || (currentSection == firstSection && event.deltaY < 0)) {
         sumYWheel = 0;
         fadeArrow.style.opacity = "0";
+        console.log("Reset sumYWheel for " + currentSection);
         // hideArrow();
     }
     // if (currentSection == "products" && sumYWheel > 
-    console.log("Moved " + event.deltaY + " at " + currentSection + ", page = " + scrollY + " total = " + sumYWheel);
+    // console.log("Moved " + event.deltaY + " at " + currentSection + ", page = " + scrollY + " total = " + sumYWheel);
     
-    if ((currentSection == "carousel" && sumYWheel >= 0) ||
+    if ((currentSection == firstSection && sumYWheel >= 0) ||
     (currentSection == "products" && sumYWheel <= 0 && scrollY <= 0)) {
         fadeArrow.style.opacity = "1";
         let icon = fadeArrow.querySelector("i");
@@ -70,10 +75,10 @@ window.addEventListener("wheel", (event) => {
         icon.style.fontSize = rate + "rem";
         icon.style.transform = "scale(" + (sumYWheel > 0 ? +1 : -1) + ")";
     }
-    if (currentSection == "carousel" && event.deltaY <= 0) 
+    if (currentSection == firstSection && event.deltaY <= 0) 
         fadeArrow.style.opacity = "0";
 
-    if (currentSection == "carousel") {
+    if (currentSection == firstSection) {
         if (sumYWheel < threshold) {
             window.scroll(scrollX, scrollY);
             return;
@@ -98,7 +103,7 @@ window.setInterval(() => {
         fadeArrow.style.opacity = "0";
     } else
     if (fadeArrow.style.opacity > 0)
-        fadeArrow.style.opacity -= 0.05;
+        fadeArrow.style.opacity -= 0.06;
     if (fadeArrow.style.opacity > 0)
         fadeArrow.style.zIndex = "3";
 }, 100);
