@@ -19,20 +19,24 @@ productsElement.style.setProperty("display", "none");
 let sumYWheel = 0;
 const threshold = 305;
 const fadeArrow = document.querySelector(".fade-arrow");
-const hideArrow = () => {
-    fadeArrow.style.opacity = "0";
-    fadeArrow.style.zIndex = "-1";
+const hideArrow = (reset = true) => {
+    if (reset) fadeArrow.style.opacity = "0";
+    fadeArrow.style.zIndex = "-2";
 };
+const showArrow = () => {
+    fadeArrow.style.zIndex = "3";
+};
+
 const skipToProducts = () => {
     sumYWheel = 0;
-    fadeArrow.style.opacity = "0";
+    hideArrow();
     firstPart.style.setProperty("display", "none");
     currentSection = "products";
     productsElement.style.setProperty("display", "block");
 };
 const skipToCarousel = () => {
     sumYWheel = 0;
-    fadeArrow.style.opacity = "0";
+    hideArrow();
     productsElement.style.setProperty("display", "none");
     currentSection = firstSection;
     firstPart.style.setProperty("display", "flex");
@@ -47,7 +51,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-window.addEventListener("wheel", (event) => {
+const adjustFadeArrow = () => {
     if (nav.dataset.active == "true") return;
     let scrollX = window.scrollX;
     let scrollY = window.scrollY;
@@ -59,7 +63,7 @@ window.addEventListener("wheel", (event) => {
     if ((currentSection == "products" && scrollY >= 0 && event.deltaY > 0)
     || (currentSection == firstSection && event.deltaY < 0)) {
         sumYWheel = 0;
-        fadeArrow.style.opacity = "0";
+        hideArrow();
         console.log("Reset sumYWheel for " + currentSection);
         // hideArrow();
     }
@@ -76,7 +80,7 @@ window.addEventListener("wheel", (event) => {
         icon.style.transform = "scale(" + (sumYWheel > 0 ? +1 : -1) + ")";
     }
     if (currentSection == firstSection && event.deltaY <= 0) 
-        fadeArrow.style.opacity = "0";
+        hideArrow();
 
     if (currentSection == firstSection) {
         if (sumYWheel < threshold) {
@@ -94,14 +98,25 @@ window.addEventListener("wheel", (event) => {
         window.scroll(0,0);
         return;
     }
+};
 
+window.addEventListener("swiped-down", () => {
+    adjustFadeArrow();
+});
+
+window.addEventListener("swiped-up", () => {
+    adjustFadeArrow();
+});
+
+window.addEventListener("wheel", (event) => {
+    adjustFadeArrow();
 });
 
 window.setInterval(() => {
-    fadeArrow.style.zIndex = "-2";
     if (!fadeArrow.style.opacity) {
         fadeArrow.style.opacity = "0";
-    } else
+    } 
+    hideArrow(false);
     if (fadeArrow.style.opacity > 0)
         fadeArrow.style.opacity -= 0.06;
     if (fadeArrow.style.opacity > 0)

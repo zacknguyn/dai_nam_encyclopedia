@@ -121,7 +121,7 @@ nav {
 }
 
 nav .mega-dropdown-menu {
-    background: #988D7C;
+    background: var(--curtain-color);
     border: none;
     border-radius: 0px;
     border-top: 5px solid #483420;
@@ -214,8 +214,8 @@ nav .dropdown-menu {
 }
 
 .dropdown-menu a:active {
-    color: #ce9b69;
-    border-left: 5px solid #ce9b69;
+    color: #d27847;
+    border-left: 5px solid #d27847;
 }
 
 .dropdown-menu > #menu-list  .menu-background {

@@ -14,7 +14,7 @@ body { width:100%; height:100%; margin:0; padding: 0; }
     --body-font: 'Lora', 'Times New Roman', serif;
     --title-font: 'Cormorant', serif;
     
-    --curtain-color: #988D7C;
+    --curtain-color: #ccb085;
     --secondary-color: #483420;
     --bg-color: #F4EAE2;
     --header-color: #3d2b11;
@@ -93,6 +93,7 @@ header h1 {
     text-align: center;
     font-size: 40px;
     padding: 5px;
+    user-select: none;
 }
 
 nav {
@@ -140,7 +141,7 @@ footer {
     margin: 0 auto;
 }
 
-.icon {
+.icon-search {
     position: absolute;
     right: 10px;
     top: calc(50% + 5px);
@@ -164,7 +165,7 @@ footer {
     box-shadow: -5px -5px 0px black;
 }
 
-.input-container:hover > .icon {
+.input-container:hover > .icon-search {
     animation: anim 1s linear infinite;
 }
 

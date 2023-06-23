@@ -47,7 +47,7 @@ body {
 
 /* To separate from carousel .product */
 .product {
-    /* position: relative; */
+    position: relative;
     /* box-sizing: border-box; */
     /* width: clamp(10vw, 250px, 30vw); */
     width: 280px;
