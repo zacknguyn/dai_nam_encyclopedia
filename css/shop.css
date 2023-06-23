@@ -22,8 +22,8 @@ main {
 body {
     height: fit-content;
 }
-/* Product-related setting */
-#products-lists {
+
+.products-container {
     width: 95%;
     margin: 0 auto;
     height: fit-content;
@@ -32,11 +32,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 5% auto;
-}
-
-#products-lists header {
-    width: 95%;
-    margin: 0 auto;
 }
 
 .products {
