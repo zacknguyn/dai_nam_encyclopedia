@@ -49,9 +49,8 @@ body {
 .product {
     position: relative;
     /* box-sizing: border-box; */
-    /* width: clamp(10vw, 250px, 30vw); */
-    width: 280px;
-    height: 400px;
+    width: clamp(20vw, 280px, 30vw);
+    height: clamp(40vh, 400px, 60vh);
     padding: 10px;
     
     background-color: var(--card-background);

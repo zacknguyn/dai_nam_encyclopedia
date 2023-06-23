@@ -20,7 +20,10 @@ let sumYWheel = 0;
 const threshold = 305;
 const fadeArrow = document.querySelector(".fade-arrow");
 const hideArrow = (reset = true) => {
-    if (reset) fadeArrow.style.opacity = "0";
+    if (reset) {
+        fadeArrow.style.opacity = "0";
+        fadeArrow.style.width = "0";
+    }
     fadeArrow.style.zIndex = "-2";
 };
 const showArrow = () => {
