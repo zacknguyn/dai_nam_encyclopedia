@@ -93,12 +93,14 @@ window.addEventListener("wheel", (event) => {
 });
 
 window.setInterval(() => {
+    fadeArrow.style.zIndex = "-2";
     if (!fadeArrow.style.opacity) {
         fadeArrow.style.opacity = "0";
-    }
-    if (fadeArrow.style.opacity > 0) {
+    } else
+    if (fadeArrow.style.opacity > 0)
         fadeArrow.style.opacity -= 0.05;
-    }
+    if (fadeArrow.style.opacity > 0)
+        fadeArrow.style.zIndex = "3";
 }, 100);
 
 // Implement carousel

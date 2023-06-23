@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/fontawesome/css/solid.css">
     
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
     <link rel="stylesheet" href="css/shop.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/footer.css" />
@@ -15,8 +16,8 @@
     <script src="js/loader.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/items.js" defer></script>
+    <script src="js/shop.js" defer></script>
     <script src="js/searchbar.js"></script>
-    
 
   </head>
   <body>
@@ -71,38 +72,79 @@
       </nav>
 
       <main>
-        <!-- Insert actual content here -->
-        <header><h1>Souvenirs Store</h1></header>
-        <div class="searchbar-container">
-          <div class="input-container">
-              <input type="text" id="search-item-shop" name="text" class="input" placeholder="search..." onkeydown="search_shop()">
-              <span class="icon"> 
-                <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-              </span>
-          </div>
+        <div class="fade-arrow">
+          <i class="fas fa-arrow-down-long"></i>
         </div>
-        <div class="products-container" id="products-container">
-          <div class="products">
-            <div class="product">
-              <img
+
+        <a href="#" id="go-top-btn">
+          <button>
+            <i class="fas fa-arrow-up"></i>
+          </button>
+        </a>
+
+        <!-- Insert actual content here -->
+        <section class="carousel">
+          <button onclick="moveLeft()">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button onclick="moveRight()">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="hot-product product" data-index="0" data-active="true"> 
+            
+            <img
                 class="product-img"
                 src="images/souvenirs/indian_podstakannik.jpg"
                 alt=""
               />
-              <div class="product-name">
-                <h3>Indian Podstakannik Who Knows What</h3>
-              </div>
-              <div class="description">
-                <p>
-                  Unique or custom, handmade pieces from our tea cups & sets
-                  shops. Longer text will enable the scroll bar. Let me test it.
-                  Haha Hehe Hoho Hihi.
-                </p>
-              </div>
-              <button class="buy">Buy now</s></button>
+            <div class="product-name">
+              <h3>Indian Podstakannik Who Knows What</h3>
+            </div>
+            <div class="description">
+              <p>
+                Unique or custom, handmade pieces from our tea cups & sets
+                shops. Longer text will enable the scroll bar. Let me test it.
+                Haha Hehe Hoho Hihi.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="hot-product" data-index="1" data-active="false"> B</div>
+          <div class="hot-product" data-index="2" data-active="false"> C </div>
+        </section>
+
+        <section class="products-container" id="products-list">
+          <header><h1>Souvenirs Store</h1></header>
+
+          <div class="searchbar-container">
+            <div class="input-container">
+                <input type="text" id="search-item-shop" name="text" class="input" placeholder="search..." onkeydown="search_shop()">
+                <span class="icon"> 
+                  <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </span>
             </div>
           </div>
-        </div>
+
+          <div class="products">
+            <!-- 
+            <div class="product">
+              <img
+                class="product-img"
+                src="images/souvenirs/file-name-here.jpg"
+                alt=""
+              />
+              <div class="product-name">
+                <h3> Name </h3>
+              </div>
+              <div class="description">
+                <p> Brief or Mythos </p>
+              </div>
+              <button class="buy">Huy <s>ngu</s></button>
+            </div>
+             -->
+          </div>
+        </section>
       </main>
 
       <footer>

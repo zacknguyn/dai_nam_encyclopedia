@@ -24,11 +24,12 @@
     padding: 0;
     /* background-position: center; */
     transform: translateX(100%);
-    transition: transform 1s ease-in;
+    transition: transform 1s ease-in-out;
 
     color: var(--bg-color);
     background-color: var(--secondary-color);
 }
+
 /* 
 .carousel .hot-product:nth-child(3) {
     background: linear-gradient(red, blue);
