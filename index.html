@@ -18,6 +18,7 @@
     <script src="js/nav.js" defer></script>
     <!-- Dainam -->
     <!-- dainammm -->
+   
 </head>
 <body>
     <div class="code-loader">
@@ -125,7 +126,7 @@
                 </div>
                 <div class="about-us-container">
                     <div class="about-us-box">
-                        <h1>About us</h1>
+                        <h1 style="cursor: pointer;" onclick="redirectToThanks()">About us</h1>
                         <p>We are a non-profitable organization publishing the old Vietnam’s most read history encyclopedia.</p>
                     </div>
                     <div class="about-us-media">
@@ -183,4 +184,9 @@
         </footer>
     </div>
 </body>
+<script>
+    function redirectToThanks() {
+      window.location.href = "thanks.html";
+    }
+  </script>
 </html>
