@@ -51,7 +51,6 @@ body {
     height: 400px;
     padding: 10px;
     
-    border-radius: 10px;
     background-color: var(--card-background);
     box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
     
@@ -94,7 +93,7 @@ body {
     width: 100%;
     min-height: 200px;
     margin: 0 auto;
-    border-radius: 5px;
+    
     border: darkslategray 1px solid;
 }
 .product-img:hover {
@@ -167,3 +166,61 @@ body {
 }
 
 
+.searchbar-container {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 2% auto;
+    padding: 0;
+    background: #faf3ee;
+    height: 150px;
+
+    outline: dashed 2px black;
+}
+
+.input-container {
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 10px;
+    top: calc(50% + 5px);
+    transform: translateY(calc(-50% - 5px));
+  }
+  
+  .input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 0;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .input:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+  }
+  
+  .input-container:hover > .icon {
+    animation: anim 1s linear infinite;
+  }
+  
+  @keyframes anim {
+    0%,
+    100% {
+      transform: translateY(calc(-50% - 5px)) scale(1);
+    }
+  
+    50% {
+      transform: translateY(calc(-50% - 5px)) scale(1.1);
+    }
+  }
