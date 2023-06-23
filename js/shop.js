@@ -68,6 +68,10 @@ window.addEventListener("scroll", () => {
     console.log("Scrolled");
     if (isHolding) alertGuide();
 });
+window.addEventListener("touchend", () => {
+    console.log("Touch end");
+    alertGuide();
+});
 
 const adjustFadeArrow = () => {
     if (nav.dataset.active == "true") return;
