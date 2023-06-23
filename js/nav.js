@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
     let navHeight = parseInt(getNavHeight());
     if (nav.dataset.active == "false") 
         menuBtn.disabled = (window.pageYOffset > navHeight) ? true : false;
-    if (window.pageYOffset > navHeight)
+    if (window.scrollY > navHeight)
         topButton.style.display = "block";
     else
         topButton.style.display = "none";
@@ -30,17 +30,23 @@ menuBtn.addEventListener("click", () => {
         window.scrollTo(0,0);
         nav.dataset.active = "true";
 
-        menuBtn.style.transform = "rotate(90deg)";
-        menuBtn.style.borderBottom = "5px solid #483420";
-        menuBtn.style.borderRight = "5px solid #483420";
+        Object.assign(menuBtn.style, {
+            transform: "rotate(90deg) scale(1.2)",
+            borderBottom: "5px solid #483420",
+            borderRight: "5px solid #483420",
+            backgroundColor: "white",
+        });
     }
     else {
         nav.dataset.active = "false";
         dropdown.style.zIndex = "-1";
         
-        menuBtn.style.transform = "rotate(0deg)";
-        menuBtn.style.borderBottom = "none";
-        menuBtn.style.borderRight = "none";
+        Object.assign(menuBtn.style, {
+            transform: "rotate(0deg)",
+            borderBottom: "none",
+            borderRight: "none",
+            backgroundColor: "transparent"
+        });
     }
 });
 

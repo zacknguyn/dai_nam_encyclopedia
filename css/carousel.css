@@ -1,11 +1,30 @@
+.first {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.first header {
+    width: fit-content;
+    padding: 2px;
+}
+
+.first header h1 {
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    text-align: start;
+    font-size: 32px;
+    width: fit-content;
+}
+
 .carousel {
     position: relative;
     z-index: 1;
     
     box-sizing: border-box;
     height: calc(100vh - var(--nav-height));
-    width: 90%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 0 2% 0 4%;
 
     background-color: burlywood;
     /* Header's style */

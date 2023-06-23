@@ -14,7 +14,7 @@ body { width:100%; height:100%; margin:0; padding: 0; }
     --body-font: 'Lora', 'Times New Roman', serif;
     --title-font: 'Cormorant', serif;
     
-    --curtain-color: #988D7C;
+    --curtain-color: #ccb085;
     --secondary-color: #483420;
     --bg-color: #F4EAE2;
     --header-color: #3d2b11;
@@ -93,6 +93,7 @@ header h1 {
     text-align: center;
     font-size: 40px;
     padding: 5px;
+    user-select: none;
 }
 
 nav {
@@ -120,3 +121,67 @@ footer {
     transition: transform 0.5s ease;
 }
 
+.searchbar-container {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 2% 5% 2% auto;
+    padding: 0;
+    background: #faf3ee;
+    height: 120px;
+
+    outline: dashed 1px var(--header-color);
+}
+
+.input-container {
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.icon-search {
+    position: absolute;
+    right: 10px;
+    top: calc(50% + 5px);
+    transform: translateY(calc(-50% - 5px));
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 0;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+}
+
+.input-container:hover > .icon-search {
+    animation: anim 1s linear infinite;
+}
+
+@keyframes anim {
+    0%,
+    100% {
+        transform: translateY(calc(-50% - 5px)) scale(1);
+    }
+
+    50% {
+        transform: translateY(calc(-50% - 5px)) scale(1.1);
+    }
+}
+
+#no-result {
+    margin: auto;
+    text-align: center;
+    display: none;
+}

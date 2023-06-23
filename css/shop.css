@@ -22,7 +22,7 @@ main {
 body {
     height: fit-content;
 }
-/* Product-related setting */
+
 .products-container {
     width: 95%;
     margin: 0 auto;
@@ -32,11 +32,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 5% auto;
-}
-
-.products-container header {
-    width: 95%;
-    margin: 0 auto;
 }
 
 .products {
@@ -52,7 +47,7 @@ body {
 
 /* To separate from carousel .product */
 .product {
-    /* position: relative; */
+    position: relative;
     /* box-sizing: border-box; */
     /* width: clamp(10vw, 250px, 30vw); */
     width: 280px;
@@ -69,7 +64,7 @@ body {
     transition: .3s;
 }
 
-.products-container .product:hover {
+#products-lists .product:hover {
     transform: translateY(-15px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
@@ -188,64 +183,6 @@ body {
     transition: all ease 0.3s;
 }
 
-.searchbar-container {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    margin: 2% auto;
-    padding: 0;
-    background: #faf3ee;
-    height: 150px;
-
-    outline: dashed 2px black;
-}
-
-.input-container {
-    width: 90%;
-    position: relative;
-    margin: 0 auto;
-  }
-  
-  .icon {
-    position: absolute;
-    right: 10px;
-    top: calc(50% + 5px);
-    transform: translateY(calc(-50% - 5px));
-  }
-  
-  .input {
-    width: 100%;
-    height: 40px;
-    padding: 5px 0;
-    transition: .2s linear;
-    border: 2.5px solid black;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .input:focus {
-    outline: none;
-    border: 0.5px solid black;
-    box-shadow: -5px -5px 0px black;
-  }
-  
-  .input-container:hover > .icon {
-    animation: anim 1s linear infinite;
-  }
-  
-  @keyframes anim {
-    0%,
-    100% {
-      transform: translateY(calc(-50% - 5px)) scale(1);
-    }
-  
-    50% {
-      transform: translateY(calc(-50% - 5px)) scale(1.1);
-    }
-  }
 .fade-arrow i {
     width: 50px;
     height: 50px;
