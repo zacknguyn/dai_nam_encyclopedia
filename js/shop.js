@@ -43,12 +43,30 @@ const skipToCarousel = () => {
 }
 
 //TODO: Add support for mobile user swipe down and who drag the scroll bar
-window.addEventListener("scroll", () => {
+let isAlerted = false;
+const alertGuide = () => {
+    if (isAlerted) return;
+    if (currentSection != firstSection) return;
     let scrollY = window.scrollY;
-    console.log(scrollY + " vs. " + main.scrollHeight + " at " + currentSection);
-    if (scrollY >= main.scrollHeight) {
+    let limit = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) - window.innerHeight - 5;
+    console.log(scrollY + " vs. " + limit + " at " + currentSection);
+    if (scrollY >= limit) {
         alert("Please swipe or roll the mouse wheel to proceed");
+        isAlerted = true;
     }
+};
+// window.scroll
+let isHolding = false;
+window.addEventListener("mousedown", () => {
+    console.log("Mouse down");
+    isHolding = true;
+});
+window.addEventListener("mouseup", () => {
+    isHolding = false;
+});
+window.addEventListener("scroll", () => {
+    console.log("Scrolled");
+    if (isHolding) alertGuide();
 });
 
 const adjustFadeArrow = () => {
