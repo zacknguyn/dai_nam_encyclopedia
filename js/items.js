@@ -37,7 +37,7 @@ hotProducts.push(
     addProduct({
         img: "images/souvenirs/s1.jpg",
         title: "Bat Trang Porcelain",
-        description: "Bát Tràng porcelain and pottery is a type of ceramic made in the village of Bát Tràng, on the outskirts of Hanoi, Vietnam."
+        description: "Bat Trang porcelain and pottery is a type of ceramic made in the village of Bat Trang, on the outskirts of Hanoi, Vietnam. The village is located in an area rich in clay suitable for making ceramic. Bát Tràng ceramics are considered some of the best known porcelain products in Vietnam besides those of Chu Đậu, Biên Hòa, Phù Lãng, Hương Canh, Lái Thiêu and Bầu Trúc. The history of ceramic making in this village can be traced back as far as the 14th century AD during the Ly-Tran dynasty period."
     })
 );
 

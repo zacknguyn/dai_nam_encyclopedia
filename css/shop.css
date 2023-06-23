@@ -71,7 +71,7 @@ body {
 .description {
     height: 150px;
     margin: 5px 0;
-    padding: 0;
+    padding: 0 20px;
     overflow-y: scroll;
 
     /* font-size: 18px; */
@@ -120,7 +120,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 60px;
-    padding: 0 5px;
+    padding: 10px 20px;
     overflow-x: scroll;
     margin: 0 auto;
     text-transform: capitalize;
@@ -215,6 +215,7 @@ body {
 .pagination a:hover:not(.active) {
     background-color: #ddd;
 }
+
 
 @media (max-width: 900px){
     .pagination{

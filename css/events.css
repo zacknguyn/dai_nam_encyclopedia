@@ -74,3 +74,25 @@
     transition: all ease 0.3s;
     cursor: pointer;
 }
+
+.pagination {
+    display: inline-block;
+    padding-top: 5%;  
+    /* padding-left: 40%; */
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
