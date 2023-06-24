@@ -76,8 +76,10 @@
 }
 
 .pagination {
-    display: inline-block;
-    padding-top: 5%;  
+    display: flex;
+    padding-top: 5%;
+    width: 100%;
+    justify-content: center;  
     /* padding-left: 40%; */
 }
 

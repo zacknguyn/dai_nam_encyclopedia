@@ -195,9 +195,11 @@ body {
 }
 
 .pagination {
-    display: inline-block;
-    padding-top: 5%;  
-    padding-left: 40%;
+    display: flex;
+    padding-top: 5%;
+    width: 100%;
+    justify-content: center;  
+    /* padding-left: 40%; */
 }
 
 .pagination a {
