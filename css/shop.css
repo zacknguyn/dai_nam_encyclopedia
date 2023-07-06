@@ -195,11 +195,9 @@ body {
 }
 
 .pagination {
-    display: flex;
-    padding-top: 5%;
-    width: 100%;
-    justify-content: center;  
-    /* padding-left: 40%; */
+    display: inline-block;
+    padding-top: 5%;  
+    padding-left: 40%;
 }
 
 .pagination a {
@@ -223,4 +221,41 @@ body {
     .pagination{
         padding-left: 21%;
     }
+}
+
+.cart-container {
+    display: none;
+}
+
+#cart-root {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.cart-sidebar {
+    width: 40%;
+    background: var(--curtain-color);
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.cart-head {
+    background: var(--header-color);
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: rgb(250, 243, 238);
+    display: flex;
+    align-items: center;
+}
+
+.cart-foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
 }

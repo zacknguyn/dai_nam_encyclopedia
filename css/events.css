@@ -40,6 +40,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 .blog-text span {
     color: black;
@@ -76,10 +77,8 @@
 }
 
 .pagination {
-    display: flex;
-    padding-top: 5%;
-    width: 100%;
-    justify-content: center;  
+    display: inline-block;
+    padding-top: 5%;  
     /* padding-left: 40%; */
 }
 

@@ -6,15 +6,14 @@
 
 .first header {
     width: fit-content;
-    padding: 1%;
+    padding: 3% 0;
 }
 
 .first header h1 {
     text-orientation: upright;
     writing-mode: vertical-lr;
     text-align: start;
-    font-size: 1.75em;
-    font-weight: bold;
+    font-size: 32px;
     width: fit-content;
 }
 
